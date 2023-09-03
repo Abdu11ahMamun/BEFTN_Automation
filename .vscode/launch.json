@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Test: LoginTest",
+            "type": "python",
+            "request": "launch",
+            "program": "${D:\\BEFTN_Automation\\tests}/login.py",  // Update with your actual test script name
+            "cwd": "D:\\BEFTN_Automation",  // Update to your project directory
+            "env": {},
+            "console": "integratedTerminal",
+            "justMyCode": false
+        }
+    ]
+}
