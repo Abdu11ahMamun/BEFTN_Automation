@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-09-04 12:32:25</p>
+                <p class='attribute'><strong>Duration: </strong>4.41 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 0, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.LoginTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_login_valid</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=116.0.5845.141)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7AA4652A2+57122]
+	(No symbol) [0x00007FF7AA3DEA92]
+	(No symbol) [0x00007FF7AA2AE3AB]
+	(No symbol) [0x00007FF7AA2AA161]
+	(No symbol) [0x00007FF7AA29CADF]
+	(No symbol) [0x00007FF7AA29DE82]
+	(No symbol) [0x00007FF7AA29CEB8]
+	(No symbol) [0x00007FF7AA29BFBE]
+	(No symbol) [0x00007FF7AA29BF63]
+	(No symbol) [0x00007FF7AA29A9E5]
+	(No symbol) [0x00007FF7AA29B153]
+	(No symbol) [0x00007FF7AA2AFF4B]
+	(No symbol) [0x00007FF7AA31EEF7]
+	(No symbol) [0x00007FF7AA306FDA]
+	(No symbol) [0x00007FF7AA31EB82]
+	(No symbol) [0x00007FF7AA306DB3]
+	(No symbol) [0x00007FF7AA2DD2B1]
+	(No symbol) [0x00007FF7AA2DE494]
+	GetHandleVerifier [0x00007FF7AA70EF82+2849794]
+	GetHandleVerifier [0x00007FF7AA761D24+3189156]
+	GetHandleVerifier [0x00007FF7AA75ACAF+3160367]
+	GetHandleVerifier [0x00007FF7AA4F6D06+653702]
+	(No symbol) [0x00007FF7AA3EA208]
+	(No symbol) [0x00007FF7AA3E62C4]
+	(No symbol) [0x00007FF7AA3E63F6]
+	(No symbol) [0x00007FF7AA3D67A3]
+	BaseThreadInitThunk [0x00007FF9A7967614+20]
+	RtlUserThreadStart [0x00007FF9A87226B1+33]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "D:\BEFTN_Automation\tests\login.py", line 20, in test_login_valid
+    driver.get("http://192.168.1.154:8080/beftn/faces/login.xhtml")
+  File "C:\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=116.0.5845.141)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7AA4652A2+57122]
+	(No symbol) [0x00007FF7AA3DEA92]
+	(No symbol) [0x00007FF7AA2AE3AB]
+	(No symbol) [0x00007FF7AA2AA161]
+	(No symbol) [0x00007FF7AA29CADF]
+	(No symbol) [0x00007FF7AA29DE82]
+	(No symbol) [0x00007FF7AA29CEB8]
+	(No symbol) [0x00007FF7AA29BFBE]
+	(No symbol) [0x00007FF7AA29BF63]
+	(No symbol) [0x00007FF7AA29A9E5]
+	(No symbol) [0x00007FF7AA29B153]
+	(No symbol) [0x00007FF7AA2AFF4B]
+	(No symbol) [0x00007FF7AA31EEF7]
+	(No symbol) [0x00007FF7AA306FDA]
+	(No symbol) [0x00007FF7AA31EB82]
+	(No symbol) [0x00007FF7AA306DB3]
+	(No symbol) [0x00007FF7AA2DD2B1]
+	(No symbol) [0x00007FF7AA2DE494]
+	GetHandleVerifier [0x00007FF7AA70EF82+2849794]
+	GetHandleVerifier [0x00007FF7AA761D24+3189156]
+	GetHandleVerifier [0x00007FF7AA75ACAF+3160367]
+	GetHandleVerifier [0x00007FF7AA4F6D06+653702]
+	(No symbol) [0x00007FF7AA3EA208]
+	(No symbol) [0x00007FF7AA3E62C4]
+	(No symbol) [0x00007FF7AA3E63F6]
+	(No symbol) [0x00007FF7AA3D67A3]
+	BaseThreadInitThunk [0x00007FF9A7967614+20]
+	RtlUserThreadStart [0x00007FF9A87226B1+33]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 0, Error: 1 -- Duration: 4.41 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

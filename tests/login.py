@@ -1,11 +1,13 @@
 from selenium import webdriver
 import time
 import unittest
+import datetime  # Import the datetime module
 import sys
 sys.path.append('D:/BEFTN_Automation') 
 
-from beftn.loginPage import loginPage
-from beftn.homePage import homePage
+from beftn.loginPage import LoginPage
+from beftn.homePage import HomePage
+import HtmlTestRunner
 
 class LoginTest(unittest.TestCase):
 
@@ -18,37 +20,29 @@ class LoginTest(unittest.TestCase):
         driver = self.driver
         driver.get("http://192.168.1.154:8080/beftn/faces/login.xhtml")
         time.sleep(2)
-        login = loginPage(driver)
+        
+        login = LoginPage(driver)
+        
         login.enter_username('mamun')
         login.enter_password('b')
         login.click_login()
         time.sleep(2)
-        homePage = homePage(driver)
+        homePage = HomePage(driver)
         homePage.click_logout()
         time.sleep(2)
 
-
-        # self.driver.find_element('xpath', '//*[@id="j_idt13"]/table[2]/tbody/tr[2]/td/input').send_keys("mamun")
-        # self.driver.find_element('xpath', '//*[@id="j_idt13:masked-password"]').send_keys("b")
-        # self.driver.find_element('xpath', '//*[@id="j_idt13"]/table[2]/tfoot/tr/td/input').click()
-        # time.sleep(2)
-        # self.driver.find_element('xpath','//*[@id="topControl"]/table/tbody/tr/td[5]/div/a').click()
-
     @classmethod
-    def tearDown(self):
-        self.driver.close()
-        self.driver.quit()
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
         print("Test finished")
 
 if __name__ == '__main__':
-    unittest.main()
+    # Generate a timestamp for the report filename
+    current_time = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    report_filename = f"D:/BEFTN_Automation/report/report_{current_time}.html"
 
-
-
-
-
-
-
-
-
-
+    # Use the timestamped filename for the report
+    unittest.main(
+        testRunner=HtmlTestRunner.HTMLTestRunner(output=report_filename)
+    )
