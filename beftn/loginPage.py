@@ -3,6 +3,7 @@ sys.path.append('D:/BEFTN_Automation')
 from location.location import Locators
 from selenium.webdriver.common.by import By
 
+
 class LoginPage:
 
     def __init__(self, driver):
@@ -25,3 +26,4 @@ class LoginPage:
     def click_login(self):
         login_button_element = self.driver.find_element(By.XPATH, self.login_button_xpath)
         login_button_element.click()
+        
